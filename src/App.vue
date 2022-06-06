@@ -1,13 +1,13 @@
 <template>
-  <header>
+  <header :class="{'scrollMove' : isScrollMove}">
     <MainHeader />
   </header>
   <main>
     <Main />
+    <footer>
+      <MainFooter />
+    </footer>
   </main>
-  <footer>
-    <MainFooter />
-  </footer>
 </template>
 
 <script>
@@ -21,6 +21,39 @@ export default {
     MainHeader,
     Main,
     MainFooter
+  },
+  data : function(){
+    return {
+      isScrollMove : false
+    }
+  },
+  mounted : function(){
+    
+    let self = this;
+    
+    let el = document.getElementsByTagName('main')[0];
+    
+    el.addEventListener('scroll', (evt)=>{
+      this.headerScrollEvt(evt, self);
+    });
+
+  },
+  methods : {
+    headerScrollEvt : (e, self) => {
+      e.preventDefault();
+
+      let mastheadHeight = document.getElementsByClassName('main-masthead')[0].getBoundingClientRect().height - 50;
+
+      if(e.target.scrollTop >= mastheadHeight){
+
+        self.isScrollMove = true;
+      
+      }else{
+
+        self.isScrollMove = false;
+
+      }
+    }
   }
 }
 </script>
