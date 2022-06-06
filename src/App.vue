@@ -1,23 +1,30 @@
 <template>
-  <h1>sohyun portFolio</h1>
+  <header>
+    <MainHeader />
+  </header>
+  <main>
+    <Main />
+  </main>
+  <footer>
+    <MainFooter />
+  </footer>
 </template>
 
 <script>
+import MainHeader from './components/header.vue'
+import Main from './components/main.vue'
+import MainFooter from './components/footer.vue'
 
 export default {
   name: 'App',
   components: {
+    MainHeader,
+    Main,
+    MainFooter
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+@import url(./assets/style.css);
 </style>
