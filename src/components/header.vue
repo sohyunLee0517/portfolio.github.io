@@ -1,13 +1,13 @@
 <template>
-    <div class="logo">
+    <div class="logo" @click="moveToScroll('top')">
         YSH's Portfolio
     </div>
     <div class="menu">
-        <div @click="moveMenu('about')">About me</div>
-        <div @click="moveMenu('skills')">Skills</div>
-        <div @click="moveMenu('archiving')">Archiving</div>
-        <div @click="moveMenu('projects')">Projects</div>
-        <div @click="moveMenu('career')">Career</div>
+        <div @click="moveToScroll('aboutMe')">About me</div>
+        <div @click="moveToScroll('skills')">Skills</div>
+        <div @click="moveToScroll('archiving')">Archiving</div>
+        <div @click="moveToScroll('projects')">Projects</div>
+        <div @click="moveToScroll('career')">Career</div>
     </div>
 </template>
 
@@ -15,6 +15,19 @@
 export default {
   name: 'MainHeader',
   props: {
+  },
+  methods : {
+      moveToScroll : (id, event) => {
+        let el = document.getElementsByTagName('main')[0];
+
+        if(id == 'top'){
+            return el.scrollTop = 0
+        }
+        let nextEl = document.getElementsByClassName(id)[0].getBoundingClientRect().top;
+
+        el.scrollTop = el.scrollTop + nextEl;
+
+      }
   }
 }
 </script>
