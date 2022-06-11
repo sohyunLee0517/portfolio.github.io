@@ -183,6 +183,38 @@ section>div {
 
 .skills .section-box-item {}
 
+.skills .section-box-item-img {
+    width : 80px;
+    height : 80px;
+    margin: 10px;
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.skills .section-box-item-img.js {
+    background-image: url('./img/js.png');
+}
+.skills .section-box-item-img.vue {
+    background-image: url('./img/vue.png');
+}
+.skills .section-box-item-img.react {
+    background-image: url('./img/react.png');
+}
+.skills .section-box-item-img.html {
+    background-image: url('./img/html.png');
+}
+.skills .section-box-item-img.css {
+    background-image: url('./img/css.png');
+}
+
+.skills .section-box-item-img.github {
+    background-image: url('./img/github.png');
+}
+.skills .section-box-item-img.figma {
+    background-image: url('./img/figma.png');
+}
+
+
 /* archiving */
 .archiving {
     background-color: #2c2a55;

@@ -9,7 +9,7 @@
         <div class="section-box-item"
         v-for="item in list.list"
         :key="item.index">
-          <img :src="item.src">
+          <div class="section-box-item-img" :class="item.img"></div>
           <div>
             <div>{{item.title}}</div>
             <div>{{item.proficiency}}</div>
@@ -33,27 +33,27 @@ export default {
           list : [
             {
               title : 'Java Script',
-              img : '',
+              img : 'js',
               proficiency : '7'
             },
             {
               title : 'Vue.js',
-              img : '',
+              img : 'vue',
               proficiency : '8'
             },
             {
               title : 'React',
-              img : '',
+              img : 'react',
               proficiency : '5'
             },
             {
               title : 'CSS',
-              img : '',
+              img : 'css',
               proficiency : '5'
             },
             {
               title : 'HTML',
-              img : '',
+              img : 'html',
               proficiency : '5'
             }
           ]
@@ -61,12 +61,9 @@ export default {
           title : 'versiton control',
           list : [
             {
-              title : 'git',
-              img : ''
-            },
-            {
               title : 'github',
-              img : ''
+              img : 'github',
+              proficiency : '5'
             },
           ]
         },{
@@ -74,7 +71,8 @@ export default {
           list : [
             {
               title : 'figma',
-              img : ''
+              img : 'figma',
+              proficiency : '7'
             },
           ]
         },{
@@ -87,6 +85,11 @@ export default {
           ]
         }
       ]
+    }
+  },
+  methods :{
+    setSrc : (src) => {
+      return '../assets/img/' + src + '.png'
     }
   }
 }
