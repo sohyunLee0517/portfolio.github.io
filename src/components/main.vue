@@ -1,10 +1,10 @@
 <template>
   <div class="main-masthead">
-    <h4>프론트엔드 개발자</h4>
     <h1>이소현</h1>
-    <div>안녕하세요.<br/>언제나 더 나은 품질과 UIUX를 위해 노력하는<br/> 보통의 새로운 FE 개발자 입니다.</div>
-    <div class="main-under-icon"
-    @click="scrollToNext"></div>
+    <h4>프론트엔드 개발자</h4>
+    <div>안녕하세요. 언제나 더 나은 품질과 UIUX를 위해 노력하는 보통의 새로운 FE 개발자 입니다.</div>
+    <!-- <div class="main-under-icon"
+    @click="scrollToNext"></div> -->
   </div>
   <section>
     <About/>

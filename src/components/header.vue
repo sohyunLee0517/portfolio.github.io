@@ -1,6 +1,7 @@
 <template>
     <div class="logo" @click="moveToScroll('top')">
-        YSH's Portfolio
+        <!-- <i></i> -->
+        <img src="../assets/img/logo_dark.svg" class="logoImg">
     </div>
     <div class="menu">
         <div @click="moveToScroll('aboutMe')">About me</div>

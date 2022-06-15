@@ -6,14 +6,16 @@
     <div class="section-wrap">
       <div class="section-box" v-for="list in skillList" :key="list.index">
         <div class="section-box-title">{{ list.title }}</div>
-        <div class="section-box-item"
-        v-for="item in list.list"
-        :key="item.index">
-          <div class="section-box-item-img" :class="item.img"></div>
-          <div>
-            <div>{{item.title}}</div>
-            <div>{{item.proficiency}}</div>
+        <div class="section-box-item">
+          <div class="section-box-item-img-group" v-show="list.title != 'sertificate'">
+            <div class="section-box-item-img"
+            v-for="item in list.list"
+            :key="item.index"
+            :class="item.img"></div>
           </div>
+          <div class="section-box-desc"
+          :class="{'skillsNoImg' : list.title != 'sertificate'}" 
+          v-text="list.desc"></div>
         </div>
       </div>
     </div>
@@ -30,51 +32,49 @@ export default {
       skillList : [
         {
           title : 'FrontEnd',
+          desc : '저는 프론트엔드를 하고 있습니다요',
           list : [
             {
               title : 'Java Script',
-              img : 'js',
-              proficiency : '7'
+              img : 'js'
             },
             {
               title : 'Vue.js',
-              img : 'vue',
-              proficiency : '8'
+              img : 'vue'
             },
             {
               title : 'React',
-              img : 'react',
-              proficiency : '5'
+              img : 'react'
             },
             {
               title : 'CSS',
-              img : 'css',
-              proficiency : '5'
+              img : 'css'
             },
             {
               title : 'HTML',
-              img : 'html',
-              proficiency : '5'
+              img : 'html'
             }
-          ]
+          ],
+          desc : ''
         },{
           title : 'versiton control',
+          desc : '',
           list : [
             {
               title : 'github',
-              img : 'github',
-              proficiency : '5'
+              img : 'github'
             },
-          ]
+          ],
+          desc : ''
         },{
           title : 'communication',
           list : [
             {
               title : 'figma',
-              img : 'figma',
-              proficiency : '7'
+              img : 'figma'
             },
-          ]
+          ],
+          desc : ''
         },{
           title : 'sertificate',
           list : [
@@ -82,7 +82,8 @@ export default {
               title : '웹디자인기능사',
               img : ''
             }
-          ]
+          ],
+          desc : '웹디자인기능사를 땄습니다.'
         }
       ]
     }

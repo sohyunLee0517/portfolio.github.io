@@ -1,6 +1,6 @@
 <template>
   <div class="archiving">
-    <div class="section-title white">
+    <div class="section-title">
         ARCHIVING
     </div>
     <div class="section-wrap">
