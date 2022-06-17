@@ -11,7 +11,7 @@
           <div class="section-box-icon" :class="list.icon"></div>
           <div class="section-cts">
             <div class="section-cts-title">{{ list.title }}</div>
-            <div class="section-cts-text">{{ list.txt }}</div>
+            <div class="section-cts-text" v-html="list.txt"></div>
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@ export default {
         {
           icon : 'phone',
           title : '연락처',
-          txt : '010'
+          txt : '01037139874'
         },
         {
           icon : 'email',
@@ -53,7 +53,7 @@ export default {
         {
           icon : 'edu',
           title : '학력',
-          txt : '방송통신대학교(컴퓨터과학과)'
+          txt : '한신대학교(디지털문화콘텐츠)<br>방송통신대학교(컴퓨터과학)'
         }
       ]
     }
