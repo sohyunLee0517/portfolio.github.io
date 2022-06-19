@@ -135,7 +135,27 @@ section>div {
 
 .section-box-title {
     font-size: 2rem;
+    font-weight: 500;
     width: fit-content
+}
+
+.section-box-sub-title{
+    font-size: 1.5rem;
+    width: fit-content;
+}
+
+.section-box-img{
+    width : 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 1px 1px 9px #ccc;
+    margin : 30px 0 10px;
+}
+
+.section-box-img-icon{
+    height: 10vh;
+    display: block;
+    margin: 10px auto 0;
 }
 
 .section-box>div {
@@ -184,6 +204,10 @@ section>div {
     width: 33%;
 }
 
+.aboutMe .section-box{
+    padding-bottom : 0;
+}
+
 .aboutMe .section-box-icon {
     background-size: 400px;
     height: inherit;
@@ -228,43 +252,17 @@ section>div {
 }
 
 .skills .section-box-item-img-group{
-    flex : 1
+    flex : 1;
+    text-align : center;
 }
 
-.skills .section-box-item-img {
+.skills .section-box-item img {
     display: inline-block;
-    width: 4rem;
     height: 5rem;
     margin: 4px 12px;
     background-size:contain;
     background-position: center;
     background-repeat: no-repeat;
-}
-.skills .section-box-item-img.js {
-    background-image: url('./img/js.png');
-}
-.skills .section-box-item-img.vue {
-    background-image: url('./img/vue.png');
-}
-.skills .section-box-item-img.react {
-    background-image: url('./img/react.png');
-}
-.skills .section-box-item-img.html {
-    background-image: url('./img/html.png');
-}
-.skills .section-box-item-img.css {
-    background-image: url('./img/css.png');
-}
-
-.skills .section-box-item-img.github {
-    background-image: url('./img/github.png');
-}
-.skills .section-box-item-img.figma {
-    background-image: url('./img/figma.png');
-    height: 4.7rem;
-}
-.skills .section-box-item-img.adobeXD {
-    background-image: url('./img/adobeXD.png');
 }
 
 .skills .section-box-desc{
@@ -278,9 +276,15 @@ section>div {
     background: #f6f5fe;
 }
 
+.archiving .section-wrap{
+    flex-direction: row;
+    width : 58%
+}
+
 .archiving .section-title {}
 
 .archiving .section-box{
+    margin : 0 10px;
     background : #fcf9ff
 }
 
@@ -303,15 +307,6 @@ section>div {
 
 .career .section-box{
     background : #fff
-}
-
-.career .section-box-img{
-    width : 100%;
-    height : 246px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    box-shadow: 1px 1px 9px #ccc;
-    margin : 30px 0 10px;
 }
 
 footer {
