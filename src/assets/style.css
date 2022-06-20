@@ -32,12 +32,8 @@ header .logo {
 
 header .logoImg{
     height : 100%;
+    cursor: pointer;
 }
-
-/* header .logo i{
-    content :url('./img/logo.svg');
-    height: 100%;
-} */
 
 .menu {
     flex: 1;
@@ -50,6 +46,11 @@ header .logoImg{
 .menu>div {
     padding-right: 50px;
     cursor: pointer;
+}
+
+.menu>div:hover,
+.menu>div.active {
+    color : #7d6dff
 }
 
 main {
@@ -123,14 +124,21 @@ section>div {
 .section-wrap {
     display: flex;
     flex-direction: column;
+    width: 50rem;
+    margin: auto;
 }
 
 .section-box {
-    width: 50%;
-    margin: auto;
     margin-bottom: 2rem;
     border-radius: 16px;
     padding: 2rem;
+    transition: 0.3s;
+}
+
+.section-box.motion:hover {
+    transform: scale(1.05);
+    background: #fcf9ff;
+    cursor: pointer;
 }
 
 .section-box-title {
@@ -193,15 +201,13 @@ section>div {
 
 .aboutMe .section-wrap {
     flex-flow: row wrap;
-    width: 50rem;
-    margin: auto;
     padding-top: 1rem;
     background: #fcf9ff;
     border-radius: 16px;
 }
 
 .aboutMe .section-wrap>div {
-    width: 33%;
+    width: 21rem;
 }
 
 .aboutMe .section-box{
@@ -278,14 +284,17 @@ section>div {
 
 .archiving .section-wrap{
     flex-direction: row;
-    width : 58%
 }
-
 .archiving .section-title {}
 
 .archiving .section-box{
+    flex : 1;
     margin : 0 10px;
-    background : #fcf9ff
+    background : #fcf9ff;
+}
+
+.archiving .section-box.motion:hover{
+    background : #fff
 }
 
 /* projects */
