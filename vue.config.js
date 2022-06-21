@@ -1,5 +1,5 @@
 module.exports = {
-  outputDir : 'dist',
+  outputDir : 'docs',
   publicPath : '/portfolio.github.io/',
   lintOnSave : false
 }
